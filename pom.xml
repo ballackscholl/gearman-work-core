@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>gearman-work-core</groupId>
+  <artifactId>gearman-work-core</artifactId>
+  <version>0.0.1</version>
+  <name>gearman-work-core</name>
+  <distributionManagement>
+  <repository>
+    <id>releases</id>
+    <name>Internal Releases</name>
+    <url>http://218.240.21.134:48081/nexus/content/repositories/releases</url>
+   </repository>
+   <snapshotRepository>
+    <id>snapshots</id>
+    <name>Internal Snapshots</name>
+    <url>http://218.240.21.134:48081/nexus/content/repositories/snapshots</url>
+   </snapshotRepository>
+  </distributionManagement>
+  
+  <properties>
+		<spring.version>4.1.6.RELEASE</spring.version>
+  </properties>
+  <dependencies>
+  	<dependency>
+	  <groupId>gearman-my</groupId>
+	  <artifactId>gearman-my</artifactId>
+	  <version>0.0.1</version>
+	</dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>1.7.7</version>
+	</dependency>
+
+	<dependency>
+	  <groupId>commons-lang</groupId>
+	  <artifactId>commons-lang</artifactId>
+	  <version>2.5</version>
+	</dependency>
+	<dependency>
+		<groupId>net.sf.json-lib</groupId>
+		<artifactId>json-lib</artifactId>
+		<version>2.4</version>
+		<classifier>jdk15</classifier>
+	</dependency>
+	<dependency>
+		<groupId>javassist</groupId>
+		<artifactId>javassist</artifactId>
+		<version>3.12.1.GA</version>
+	</dependency>
+	<dependency>
+		<groupId>com.google.guava</groupId>
+		<artifactId>guava</artifactId>
+		<version>18.0</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>${spring.version}</version>
+		<exclusions>
+			<!-- Exclude Commons Logging in favor of SLF4j -->
+			<exclusion>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+			</exclusion>
+		</exclusions>
+	</dependency>
+	
+  </dependencies>
+</project>
